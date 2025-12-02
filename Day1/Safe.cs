@@ -1,4 +1,4 @@
-﻿namespace AOC2025;
+﻿namespace Day1;
 
 public class Safe(int initialDial)
 {

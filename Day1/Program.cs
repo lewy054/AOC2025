@@ -1,4 +1,4 @@
-﻿using AOC2025;
+﻿using Day1;
 using Infrastructure;
 
 const string fileName = "input.txt";

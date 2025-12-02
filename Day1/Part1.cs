@@ -1,6 +1,6 @@
 ﻿using Infrastructure;
 
-namespace AOC2025;
+namespace Day1;
 
 public class Part1(IEnumerable<string> input)
 {
