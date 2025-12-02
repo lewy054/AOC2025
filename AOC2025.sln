@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day1", "Day1\Day1.csproj", "{A3792A6D-5707-4EBA-B526-0BEF7ED0A260}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BBEA17FD-E982-41A9-88F8-55E664E2441E} = {BBEA17FD-E982-41A9-88F8-55E664E2441E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{BBEA17FD-E982-41A9-88F8-55E664E2441E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3792A6D-5707-4EBA-B526-0BEF7ED0A260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3792A6D-5707-4EBA-B526-0BEF7ED0A260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3792A6D-5707-4EBA-B526-0BEF7ED0A260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3792A6D-5707-4EBA-B526-0BEF7ED0A260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEA17FD-E982-41A9-88F8-55E664E2441E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEA17FD-E982-41A9-88F8-55E664E2441E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEA17FD-E982-41A9-88F8-55E664E2441E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEA17FD-E982-41A9-88F8-55E664E2441E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
