@@ -46,7 +46,7 @@ public static class StringExtensions
                 .ToList();
         }
         
-        public int GetHighestNumber(int howManyDigits)
+        public UInt128 GetHighestNumber(int howManyDigits)
         {
             var final = "";
             var remaining = text;
@@ -65,7 +65,7 @@ public static class StringExtensions
 
                 remaining = remaining[(maxIndex + 1)..];
             }
-            return int.Parse(final);
+            return UInt128.Parse(final);
         }
     }
 }

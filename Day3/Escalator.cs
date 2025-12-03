@@ -4,14 +4,14 @@ namespace Day3;
 
 public class Escalator(List<string> banks)
 {
-    private List<string> Batteries { get; set; } = banks;
+    private List<string> Batteries { get; } = banks;
 
-    public int GetMaxJoltageFromTwoBatteries()
+    public UInt128 GetMaxJoltageBatteries(int digits)
     {
-        var totalJoltage = 0;
+        UInt128 totalJoltage = 0;
         foreach (var battery in Batteries)
         {
-            var maxJoltage = battery.GetHighestNumber(2);
+            var maxJoltage = battery.GetHighestNumber(digits);
             totalJoltage += maxJoltage;
         }
 
