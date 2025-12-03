@@ -37,5 +37,35 @@ public static class StringExtensions
 
             return false;
         }
+
+        public List<int> SortNumericString()
+        {
+            return text
+                .Select(c => int.Parse(c.ToString()))
+                .OrderBy(x => x)
+                .ToList();
+        }
+        
+        public int GetHighestNumber(int howManyDigits)
+        {
+            var final = "";
+            var remaining = text;
+            while (final.Length < howManyDigits)
+            {
+                var remainingLengthNeeded = howManyDigits - final.Length;
+                var maxIndex = 0;
+                
+                // stop before the end to ensure enough digits remain for the final number
+                for (var i = 0; i <= remaining.Length - remainingLengthNeeded; i++)
+                {
+                    if (remaining[i] > remaining[maxIndex])
+                        maxIndex = i;
+                }
+                final += remaining[maxIndex];
+
+                remaining = remaining[(maxIndex + 1)..];
+            }
+            return int.Parse(final);
+        }
     }
 }
