@@ -4,6 +4,9 @@ using Infrastructure;
 const string fileName = "input.txt";
 var input = FileHelpers.GetFileContent(fileName).ToList();
 
-var part1 = new Part1(input);
-var accessiblePaperRolls = part1.Resolve();
+var warehouse = new Warehouse(input);
+var accessiblePaperRolls = warehouse.GetAccessiblePaperRolls();
 Console.WriteLine($"Results of Day1, Part1 : {accessiblePaperRolls}");
+
+var howManyPaperRollsCanBeRemoved = warehouse.HowManyPaperRollsCanBeRemoved();
+Console.WriteLine($"Results of Day1, Part2 : {howManyPaperRollsCanBeRemoved}");
