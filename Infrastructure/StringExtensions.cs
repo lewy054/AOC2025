@@ -67,5 +67,15 @@ public static class StringExtensions
             }
             return UInt128.Parse(final);
         }
+        
+        public IEnumerable<int> AllIndexesOf(string searchString)
+        {
+            var minIndex = text.IndexOf(searchString, StringComparison.Ordinal);
+            while (minIndex != -1)
+            {
+                yield return minIndex;
+                minIndex = text.IndexOf(searchString, minIndex + searchString.Length, StringComparison.Ordinal);
+            }
+        }
     }
 }
