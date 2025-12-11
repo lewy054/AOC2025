@@ -9,6 +9,29 @@ var rectangleAreas = CreateRectangles(redTilesLocations);
 var largestRectangleByArea = rectangleAreas.MaxBy(e => e.CalculateArea());
 Console.WriteLine($"Results of Day8, Part1 : {largestRectangleByArea?.CalculateArea()}");
 
+var filledRectangle = GetRectanglesInsideBox(rectangleAreas, redTilesLocations);
+var largestFilledRectangle = filledRectangle.MaxBy(e => e.CalculateArea());
+Console.WriteLine($"Results of Day8, Part2 : {largestFilledRectangle?.CalculateArea()}");
+
+return;
+
+List<Rectangle> GetRectanglesInsideBox(List<Rectangle> rectanglesWithArea, List<Location> redTileLocations)
+{
+    var orderedRectangle = rectanglesWithArea
+        .OrderByDescending(r => r.CalculateArea());
+    var rectanglesInside = new List<Rectangle>();
+    foreach (var rectangle in orderedRectangle)
+    {
+        var isInsideRectangle = rectangle.IsInsidePoints(redTileLocations);
+        if (isInsideRectangle)
+        {
+            rectanglesInside.Add(rectangle);
+        }
+    }
+
+    return rectanglesInside;
+}
+
 
 List<Rectangle> CreateRectangles(List<Location> locations)
 {
