@@ -9,4 +9,10 @@ public static partial class Regexes
     
     [GeneratedRegex(@"[+*]")]
     public static partial Regex PlusAndMultiplySymbols();
+    
+    [GeneratedRegex(@"\{([^}]*)\}")]
+    public static partial Regex NumbersBetweenCurlyBrace();
+    
+    [GeneratedRegex(@"\[(.*?)\]")]
+    public static partial Regex CharsBetweenSquareBracket();
 }
